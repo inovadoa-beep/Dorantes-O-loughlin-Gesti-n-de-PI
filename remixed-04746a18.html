@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorantes Oloughlin PI</title>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        // 🔒 CANDADO DE CONTRASEÑA
-        const contrasenaCorrecta = "PiDoa2026.";
+   <script>
+        // CANDADO DE CONTRASEÑA
+        const contrasenaCorrecta = "PiDoa2026."; 
         const intentoUsuario = prompt("Por favor, introduce la contraseña para acceder al sistema:");
 
         if (intentoUsuario !== contrasenaCorrecta) {
             alert("Contraseña incorrecta. Acceso denegado.");
             window.stop(); // Detiene por completo la carga de la página
-            document.documentElement.innerHTML = "<h1 style='text-align:center; margin-top:100px; font-family:sans-serif;'>Acceso Denegado</h1>";
         }
     </script>
     <script>
@@ -51,9 +53,6 @@ async function guardarNuevoProspecto(nombre, estado) {
   }
 }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dorantes Oloughlin PI</title>
 <style>
 :root{
   --bg:#F8F9FB;--bg2:#FFFFFF;--bg3:#F2F4F7;--bg4:#E8EBF0;--bg5:#DDE2EA;
