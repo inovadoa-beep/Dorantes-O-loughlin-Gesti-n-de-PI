@@ -5,6 +5,24 @@ const SUPABASE_URL = "https://bgiiozxywabonqyhprjj.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaWlvenh5d2Fib25xeWhwcmpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIyMTg5MjksImV4cCI6MjA5Nzc5NDkyOX0.-DB1-XtUdNozjJPjfdqJXYrVL_3vPLRSefMz4is_QZc";
 
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+const SUPABASE_URL = "https://bgiiozxywabonqyhprjj.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// 🔒 AQUÍ PEGAS EL CANDADO DE CONTRASEÑA
+const contrasenaCorrecta = "PiDoa2026."; //
+const intentoUsuario = prompt("Por favor, introduce la contraseña para acceder al sistema:");
+
+if (intentoUsuario !== contrasenaCorrecta) {
+    alert("Contraseña incorrecta. Acceso denegado.");
+    document.body.innerHTML = "<h1 style='text-align:center; margin-top:100px; font-family:sans-serif;'>Acceso Denegado</h1>";
+    window.stop(); 
+}
+// 🔒 TERMINA EL CANDADO
+
+async function cargarTramites() {
+    // ... todo tu código de abajo sigue exactamente igual
 async function cargarTramites() {
   const { data, error } = await supabase
     .from('tramites')
